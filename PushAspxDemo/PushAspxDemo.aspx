@@ -17,9 +17,9 @@
 <body>
     <form id="form1" runat="server">
     
-    ApiKey:&nbsp&nbsp&nbsp<asp:TextBox ID="TBAK" runat="server" Width="400px" Text="Th9Q9eVyPwQ9M8dqghQATEgf"></asp:TextBox>
+    ApiKey:&nbsp&nbsp&nbsp<asp:TextBox ID="TBAK" runat="server" Width="400px" ></asp:TextBox>
     <br />
-    SecretKey:<asp:TextBox ID="TBSK" runat="server" Width="400px" Text="7YgcbppDGC4y8Q9Eviy7WaC1OBaTzWAH"></asp:TextBox>
+    SecretKey:<asp:TextBox ID="TBSK" runat="server" Width="400px"></asp:TextBox>
     <br />
     
     <br />
