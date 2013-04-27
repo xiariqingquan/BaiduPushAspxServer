@@ -1,0 +1,15 @@
+D:\WP7\C#\SendToast\SendToast\bin\SendToast.dll
+D:\WP7\C#\SendToast\SendToast\bin\SendToast.pdb
+D:\WP7\C#\SendToast\SendToast\obj\Debug\SendToast.csprojResolveAssemblyReference.cache
+D:\WP7\C#\SendToast\SendToast\obj\Debug\SendToast.dll
+D:\WP7\C#\SendToast\SendToast\obj\Debug\SendToast.pdb
+E:\wppushsdk\WP7\C#\SendToast\SendToast\bin\SendToast.dll
+E:\wppushsdk\WP7\C#\SendToast\SendToast\bin\SendToast.pdb
+E:\wppushsdk\WP7\C#\SendToast\SendToast\obj\Debug\SendToast.csprojResolveAssemblyReference.cache
+E:\wppushsdk\WP7\C#\SendToast\SendToast\obj\Debug\SendToast.dll
+E:\wppushsdk\WP7\C#\SendToast\SendToast\obj\Debug\SendToast.pdb
+D:\Project\C#\SendToast\SendToast\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\C#\SendToast\SendToast\bin\PushAspxDemo.dll
+D:\Project\C#\SendToast\SendToast\bin\PushAspxDemo.pdb
+D:\Project\C#\SendToast\SendToast\obj\Debug\PushAspxDemo.dll
+D:\Project\C#\SendToast\SendToast\obj\Debug\PushAspxDemo.pdb
