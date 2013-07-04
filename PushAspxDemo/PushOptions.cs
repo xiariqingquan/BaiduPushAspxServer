@@ -45,6 +45,7 @@ namespace PushAspxDemo
              string apikey,
              string user_id,
              string channel_id,
+             uint device_type,
              string messages,
              string msg_keys,
              uint timestamp
@@ -59,12 +60,13 @@ namespace PushAspxDemo
              this.msg_keys = msg_keys;
              this.timestamp = timestamp;
 
-             device_type = 3;
+             this.device_type = device_type;
          }
          //组播
          public PushOptions(string method,
              string apikey,
              string tag,
+             uint device_type,
              string messages,
              string msg_keys,
              uint timestamp
@@ -78,12 +80,13 @@ namespace PushAspxDemo
              this.msg_keys = msg_keys;
              this.timestamp = timestamp;
 
-             device_type = 3;
+             this.device_type = device_type;
          }
 
         //广播
          public PushOptions(string method,
             string apikey,
+             uint device_type,
             string messages,
             string msg_keys,
             uint timestamp
@@ -96,7 +99,7 @@ namespace PushAspxDemo
             this.msg_keys = msg_keys;
             this.timestamp = timestamp;
 
-            device_type = 3;
+            this.device_type = device_type;
         }
 
         public string method { get; set; } 	//string 	是 	方法名，必须存在：push_msg。

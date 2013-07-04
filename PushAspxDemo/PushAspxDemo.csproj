@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="BaiduPush.cs" />
     <Compile Include="BaiduPushNotification.cs" />
+    <Compile Include="IOSNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PushOptions.cs" />
     <Compile Include="PushAspxDemo.aspx.cs">

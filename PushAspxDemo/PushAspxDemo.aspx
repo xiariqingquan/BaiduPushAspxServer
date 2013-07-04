@@ -42,6 +42,14 @@
     <br />
 
     <br />
+        Device Type:
+    <br />
+    &nbsp<asp:RadioButton ID="RBAndroid" runat="server" Text="Android" GroupName="rbDeviceType" Checked=true/>
+    
+    &nbsp<asp:RadioButton ID="RBIOS" runat="server" Text="IOS(Only Support Notification)" GroupName="rbDeviceType"/>
+
+    <br />
+     <br />
         Message Type:
     <br />
     &nbsp<asp:RadioButton ID="RbNotify" runat="server" Text="Notification" GroupName="rbMessage" />

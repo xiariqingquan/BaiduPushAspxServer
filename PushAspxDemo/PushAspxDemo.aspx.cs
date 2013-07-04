@@ -29,9 +29,10 @@ namespace PushAspxDemo
 
                 BaiduPush Bpush = new BaiduPush("POST", sk);
                 String apiKey = ak;
-                String messages;
+                String messages="";
                 String method = "push_msg";
                 TimeSpan ts = (DateTime.UtcNow - new DateTime(1970,1,1,0,0,0));
+                uint device_type=3;
                 uint unixTime = (uint)ts.TotalSeconds;
 
                 uint message_type;
@@ -44,24 +45,35 @@ namespace PushAspxDemo
                 else
                 {
                     message_type = 1;
-                    BaiduPushNotification notification=new BaiduPushNotification();
-                    notification.title = TBTitle.Text;
-                    notification.description = TBDescription.Text;
-                    messages =notification.getJsonString().Replace("\"", "'");
-                    
+
+                    if (RBIOS.Checked == true)
+                    {
+                        device_type = 4;
+                        IOSNotification notification = new IOSNotification();
+                        notification.title = TBTitle.Text;
+                        notification.description = TBDescription.Text;
+                        messages = notification.getJsonString();
+                    }
+                    else
+                    {
+                        BaiduPushNotification notification = new BaiduPushNotification();
+                        notification.title = TBTitle.Text;
+                        notification.description = TBDescription.Text;
+                        messages = notification.getJsonString();
+                    }
                 }
 
 
                 PushOptions pOpts;
                 if(RBUnicast.Checked)
                 {
-                    pOpts = new PushOptions(method, apiKey, TBUserId.Text, TBChannelID.Text, messages, messageksy, unixTime);
+                    pOpts = new PushOptions(method, apiKey, TBUserId.Text, TBChannelID.Text, device_type,messages, messageksy, unixTime);
                 }else if(RBMulticast.Checked)
                 {
-                    pOpts = new PushOptions(method, apiKey, TBTag.Text, messages, messageksy, unixTime);
+                    pOpts = new PushOptions(method, apiKey, TBTag.Text, device_type, messages, messageksy, unixTime);
                 }else
                 {
-                    pOpts = new PushOptions(method, apiKey, messages, messageksy, unixTime);
+                    pOpts = new PushOptions(method, apiKey, device_type, messages, messageksy, unixTime);
                 }
 
                 pOpts.message_type = message_type;
