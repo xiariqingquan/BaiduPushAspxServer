@@ -160,5 +160,7 @@ namespace PushAspxDemo
         public string sign { get; set; } 	//string 	是 	调用参数签名值，与apikey成对出现。
         public uint? expires { get; set; }//	uint 	否 	用户指定本次请求签名的失效时间。格式为unix时间戳形式。
         public uint? v { get; set; }	//uint 	否 	API版本号，默认使用最高版本。
+
+        public uint? deploy_status { get; set; } //部署状态。指定应用当前的部署状态，可取值：1：开发状态 2：生产状态
     }
 }

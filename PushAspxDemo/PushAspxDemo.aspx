@@ -42,17 +42,19 @@
     <br />
 
     <br />
-        Device Type:
+        Device Type(IOS Only Support Notification):
     <br />
     &nbsp<asp:RadioButton ID="RBAndroid" runat="server" Text="Android" GroupName="rbDeviceType" Checked=true/>
     
-    &nbsp<asp:RadioButton ID="RBIOS" runat="server" Text="IOS(Only Support Notification)" GroupName="rbDeviceType"/>
+    &nbsp<asp:RadioButton ID="RBIOSPRO" runat="server" Text="IOS(Production)" GroupName="rbDeviceType"/>
+
+    &nbsp<asp:RadioButton ID="RBIOSDEV" runat="server" Text="IOS(Developer)" GroupName="rbDeviceType"/>
 
     <br />
      <br />
         Message Type:
     <br />
-    &nbsp<asp:RadioButton ID="RbNotify" runat="server" Text="Notification" GroupName="rbMessage" />
+    &nbsp<asp:RadioButton ID="RbNotify" runat="server" Text="Notification" GroupName="rbMessage"  Checked="True"/>
     <br />
     &nbsp&nbsp&nbsp Title:<br />
     &nbsp&nbsp&nbsp&nbsp<asp:TextBox ID="TBTitle" runat="server" Width="400px"></asp:TextBox>
@@ -80,7 +82,7 @@
     -->
 
     <br />
-    &nbsp<asp:RadioButton ID="RbMessage" runat="server" Text="Message" GroupName="rbMessage" Checked="True" />
+    &nbsp<asp:RadioButton ID="RbMessage" runat="server" Text="Message" GroupName="rbMessage" />
     <br />
     &nbsp&nbsp&nbsp&nbsp<asp:TextBox ID="TBMessage" runat="server" Width="400px"></asp:TextBox>
     <br />

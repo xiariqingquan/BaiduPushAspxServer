@@ -46,7 +46,7 @@ namespace PushAspxDemo
                 {
                     message_type = 1;
 
-                    if (RBIOS.Checked == true)
+                    if (RBIOSPRO.Checked == true || RBIOSDEV.Checked == true)
                     {
                         device_type = 4;
                         IOSNotification notification = new IOSNotification();
@@ -77,6 +77,15 @@ namespace PushAspxDemo
                 }
 
                 pOpts.message_type = message_type;
+                if (RBIOSPRO.Checked == true)
+                {
+                     pOpts.deploy_status = 2;
+                }
+                else if(RBIOSDEV.Checked == true)
+                {
+                    pOpts.deploy_status = 1;
+                }
+               
 
                 string response= Bpush.PushMessage(pOpts);
 
