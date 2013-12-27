@@ -53,7 +53,7 @@ namespace PushAspxDemo
             }
 
             //按要求拼接字符串，并urlencode编码
-            var str = HttpUtility.UrlEncode(this.httpMehtod.ToUpper() + this.url + preData.ToString() + this.secret_key);
+            var str = HttpUtility.UrlEncode(this.httpMehtod.ToUpper() + this.url + preData.ToString() + this.secret_key, System.Text.Encoding.UTF8);
 
             var strSignUpper = new StringBuilder();
             int perIndex = 0;
@@ -66,13 +66,16 @@ namespace PushAspxDemo
                 }
                 if (i - perIndex == 1 || i - perIndex == 2)
                 {
-                    c = c.ToUpper();
+                c = c.ToUpper();
                 }
                 strSignUpper.Append(c);
             }
 
-            var sign = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(strSignUpper.ToString(), "MD5").ToLower();
+            strSignUpper = strSignUpper.Replace("(", "%28").Replace(")", "%29");
 
+            
+            var sign = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(strSignUpper.ToString(), "MD5").ToLower();
+            
             //加入生成好的sign键值对
             dic.Add("sign", sign);
             var strb = new StringBuilder();
@@ -116,7 +119,7 @@ namespace PushAspxDemo
                         break;
                     }
                 }
-                return "Post:" + postStr + ex.Message + "\r\n\r\n" + Encoding.UTF8.GetString(buf, 0, count);
+                return  Post:" + postStr + ex.Message + "\r\n\r\n" + Encoding.UTF8.GetString(buf, 0, count);
             }
         }
     }
