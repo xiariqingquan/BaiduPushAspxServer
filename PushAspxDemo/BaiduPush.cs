@@ -119,7 +119,7 @@ namespace PushAspxDemo
                         break;
                     }
                 }
-                return  Post:" + postStr + ex.Message + "\r\n\r\n" + Encoding.UTF8.GetString(buf, 0, count);
+                return  "Post:" + postStr + ex.Message + "\r\n\r\n" + Encoding.UTF8.GetString(buf, 0, count);
             }
         }
     }
